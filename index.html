@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Animated Background Elements -->
+  <div class="bg-anime"></div>
+  <div class="bg-anime"></div>
+  <div class="bg-anime"></div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Header with Anime Avatar -->
+    <header>
+      <div class="avatar-container">
+        <img src="avatar.png" alt="Anime Avatar" class="avatar">
+        <div class="avatar-halo"></div>
+      </div>
+      <h1>Your Name</h1>
+      <p class="tagline">Web Developer & Anime Enthusiast</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+      <ul>
+        <li><a href="#about"><i class="fas fa-user-ninja"></i> About</a></li>
+        <li><a href="#work"><i class="fas fa-laptop-code"></i> Work</a></li>
+        <li><a href="#skills"><i class="fas fa-fire-alt"></i> Skills</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="about">
+      <h2><span class="anime-icon">✧</span> About Me</h2>
+      <p>Hello! I'm a passionate developer who loves blending technology with anime aesthetics. When I'm not coding, you can find me watching the latest seasonal anime or attending conventions.</p>
+    </section>
+
+    <section id="work">
+      <h2><span class="anime-icon">✦</span> My Work</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="project1.jpg" alt="Project 1">
+          <h3>Anime Tracker App</h3>
+          <p>A React application for tracking anime watchlists</p>
+        </div>
+        <div class="project-card">
+          <img src="project2.jpg" alt="Project 2">
+          <h3>Character API</h3>
+          <p>REST API serving anime character data</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2><span class="anime-icon">★</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill" data-level="90"><span>HTML/CSS</span></div>
+        <div class="skill" data-level="85"><span>JavaScript</span></div>
+        <div class="skill" data-level="80"><span>React</span></div>
+        <div class="skill" data-level="75"><span>UI Design</span></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><span class="anime-icon">✉</span> Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>© 2023 Your Name | Made with ♥ and anime power</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+      </html>
