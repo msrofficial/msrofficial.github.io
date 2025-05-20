@@ -1,0 +1,106 @@
+:root {
+  --primary: #ff6b9e;
+  --secondary: #9d65c9;
+  --dark: #2a2d45;
+  --light: #f8f3ff;
+  --accent: #ffcc00;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Anime-themed elements */
+.bg-anime {
+  position: fixed;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ff6b9e" d="M30,10 Q50,5 70,10 T90,30 Q95,50 90,70 T70,90 Q50,95 30,90 T10,70 Q5,50 10,30 T30,10"/></svg>');
+  width: 50px;
+  height: 50px;
+  opacity: 0.3;
+  z-index: -1;
+  animation: float 15s infinite linear;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.avatar-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.avatar-halo {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,107,158,0.3) 0%, rgba(255,107,158,0) 70%);
+  z-index: -1;
+  animation: pulse 3s infinite alternate;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  margin: 30px 0;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.tagline {
+  color: var(--secondary);
+  font-size: 1.2rem;
+}
+
+/* Add more styles as needed... */
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.3; }
+  100% { transform: scale(1.1); opacity: 0.5; }
+}
