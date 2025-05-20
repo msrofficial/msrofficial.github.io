@@ -1,94 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anime Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakibur Rahman | Summertime Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- Animated Background Elements -->
-  <div class="bg-anime"></div>
-  <div class="bg-anime"></div>
-  <div class="bg-anime"></div>
-
-  <!-- Main Container -->
-  <div class="container">
-    <!-- Header with Anime Avatar -->
-    <header>
-      <div class="avatar-container">
-        <img src="avatar.png" alt="Anime Avatar" class="avatar">
-        <div class="avatar-halo"></div>
-      </div>
-      <h1>Your Name</h1>
-      <p class="tagline">Web Developer & Anime Enthusiast</p>
+    <div id="particles-js"></div>
+    
+    <!-- Header with Time Loop Effect -->
+    <header class="time-loop-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/shadow-logo.svg" alt="Shadow Logo">
+                <span>SUMMERTIME</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="time-loop-link">Home</a></li>
+                    <li><a href="#about" class="time-loop-link">About</a></li>
+                    <li><a href="#skills" class="time-loop-link">Skills</a></li>
+                    <li><a href="#projects" class="time-loop-link">Projects</a></li>
+                    <li><a href="#contact" class="time-loop-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#about"><i class="fas fa-user-ninja"></i> About</a></li>
-        <li><a href="#work"><i class="fas fa-laptop-code"></i> Work</a></li>
-        <li><a href="#skills"><i class="fas fa-fire-alt"></i> Skills</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Sections -->
-    <section id="about">
-      <h2><span class="anime-icon">✧</span> About Me</h2>
-      <p>Hello! I'm a passionate developer who loves blending technology with anime aesthetics. When I'm not coding, you can find me watching the latest seasonal anime or attending conventions.</p>
-    </section>
-
-    <section id="work">
-      <h2><span class="anime-icon">✦</span> My Work</h2>
-      <div class="projects">
-        <div class="project-card">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>Anime Tracker App</h3>
-          <p>A React application for tracking anime watchlists</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Shinpei Ajiro">Shinpei Ajiro</h1>
+                <p class="subtitle">Time Looper • Problem Solver • Shadow Hunter</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary pulse">Explore My World</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/shinpei-avatar.png" alt="Shinpei Ajiro" class="floating">
+            </div>
         </div>
-        <div class="project-card">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>Character API</h3>
-          <p>REST API serving anime character data</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm Shinpei Ajiro, returned to Hitogashima Island after Ushio's death, only to discover the terrifying truth about shadows and time loops.</p>
+                    <p>With my ability to loop time upon death, I've dedicated myself to uncovering secrets and protecting those I care about from the shadow entities.</p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Before Loop</div>
+                            <div class="timeline-content">
+                                <h3>Life in Tokyo</h3>
+                                <p>Living with the Kofune family after my parents' death</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">First Loop</div>
+                            <div class="timeline-content">
+                                <h3>Return to Hitogashima</h3>
+                                <p>Discovered Ushio's death and the shadow conspiracy</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Current</div>
+                            <div class="timeline-content">
+                                <h3>Shadow Hunter</h3>
+                                <p>Using time loops to outsmart shadows and save the island</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="hexagon">
+                        <div class="hexagon-inner">
+                            <img src="images/shinpei-bg.jpg" alt="Shinpei">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="skills">
-      <h2><span class="anime-icon">★</span> Skills</h2>
-      <div class="skills-grid">
-        <div class="skill" data-level="90"><span>HTML/CSS</span></div>
-        <div class="skill" data-level="85"><span>JavaScript</span></div>
-        <div class="skill" data-level="80"><span>React</span></div>
-        <div class="skill" data-level="75"><span>UI Design</span></div>
-      </div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My <span>Abilities</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <h3>Time Loop</h3>
+                    <p>Ability to return to a previous point in time upon death</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Analytical Thinking</h3>
+                    <p>Quickly analyze situations and formulate strategies</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Shadow Detection</h3>
+                    <p>Identify shadow entities and their weaknesses</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3>Tactical Planning</h3>
+                    <p>Develop complex plans to outmaneuver enemies</p>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2><span class="anime-icon">✉</span> Contact</h2>
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send <i class="fas fa-paper-plane"></i></button>
-      </form>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My <span>Journey</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Ushio+Investigation" alt="Ushio Investigation">
+                        <div class="project-overlay">
+                            <h3>Ushio Investigation</h3>
+                            <p>Uncovering the truth behind Ushio's death</p>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Shadow+Research" alt="Shadow Research">
+                        <div class="project-overlay">
+                            <h3>Shadow Research</h3>
+                            <p>Documenting shadow entities and their behaviors</p>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300?text=Time+Loop+Strategies" alt="Time Loop Strategies">
+                        <div class="project-overlay">
+                            <h3>Time Loop Strategies</h3>
+                            <p>Optimizing actions across multiple timelines</p>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="social-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <p>© 2023 Your Name | Made with ♥ and anime power</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Hitogashima Island, Japan</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>shinpei@summertimerendering.jp</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+81 XXX-XXXX-XXXX</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/shadow-logo.svg" alt="Shadow Logo">
+                    <span>SUMMERTIME RENDERING</span>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Shinpei Ajiro. All rights reserved. | Summertime Rendering</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
 </body>
-      </html>
+</html>
