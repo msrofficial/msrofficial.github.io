@@ -3,221 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSR Sakibur | Social Links</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>MSR Sakibur</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        :root {
-            --primary-bg: #0f0c29;
-            --gradient-1: #302b63;
-            --gradient-2: #24243e;
-            --accent-color: #00d2ff;
-            --text-color: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
-
+        /* Modern Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background: linear-gradient(45deg, var(--primary-bg), var(--gradient-1), var(--gradient-2));
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            min-height: 100vh;
+            background-color: #0a0a0a; /* Deep Black for minimal look */
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--text-color);
-            overflow-x: hidden;
-            position: relative;
+            min-height: 100vh;
+            padding: 20px;
         }
 
-        /* Animated Background Blobs */
-        .blob {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: var(--accent-color);
-            filter: blur(80px);
-            opacity: 0.4;
-            border-radius: 50%;
-            z-index: 0;
-            animation: float 8s infinite ease-in-out;
-        }
-        .blob:nth-child(1) { top: -50px; left: -50px; background: #ff0076; }
-        .blob:nth-child(2) { bottom: -50px; right: -50px; background: #00d2ff; animation-delay: 4s; }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(20px); }
-        }
-
-        /* Main Card Container */
         .container {
-            position: relative;
-            z-index: 1;
-            width: 90%;
-            max-width: 450px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 40px 20px;
+            width: 100%;
+            max-width: 400px; /* Limits width for phone view */
             text-align: center;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
+        /* Profile Image */
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 96px;
+            height: 96px;
             border-radius: 50%;
-            border: 3px solid var(--accent-color);
-            margin-bottom: 20px;
+            background-color: #222;
             object-fit: cover;
-            /* Placeholder image, replace with your own */
-            background-image: url('https://ui-avatars.com/api/?name=MSR+Sakibur&background=00d2ff&color=fff&size=128'); 
+            margin-bottom: 16px;
+            border: 2px solid #333;
+            /* Replace the URL below with your actual photo */
+            background-image: url('https://ui-avatars.com/api/?name=MSR&background=random&size=128');
             background-size: cover;
+            background-position: center;
             display: inline-block;
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
         }
 
         h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
         }
 
         .bio {
+            color: #888;
             font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 30px;
-            font-weight: 300;
+            margin-bottom: 32px;
+            line-height: 1.5;
         }
 
+        /* Links Section */
         .links {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .link-item {
+        .link-card {
             display: flex;
             align-items: center;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px 20px;
-            border-radius: 12px;
+            justify-content: space-between;
+            background-color: #161616;
+            padding: 14px 20px;
+            border-radius: 8px;
             text-decoration: none;
-            color: white;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            position: relative;
-            overflow: hidden;
+            color: #eee;
+            border: 1px solid #222;
+            transition: all 0.2s ease;
         }
 
-        .link-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-            border-color: var(--accent-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        .link-card:hover {
+            background-color: #202020;
+            border-color: #444;
+            transform: scale(1.01);
         }
 
-        .link-item i {
-            font-size: 24px;
-            width: 30px;
-            margin-right: 15px;
+        .link-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-card i {
+            font-size: 18px;
+            width: 24px;
             text-align: center;
+            color: #ccc;
         }
 
         .link-text {
+            font-size: 14px;
             font-weight: 500;
-            font-size: 16px;
         }
-        
-        /* Specific Colors on Hover (Optional) */
-        .link-item:hover i.fa-github { color: #f0f6fc; }
-        .link-item:hover i.fa-youtube { color: #ff0000; }
-        .link-item:hover i.fa-instagram { color: #e1306c; }
-        .link-item:hover i.fa-facebook { color: #1877f2; }
-        .link-item:hover i.fa-globe { color: #00d2ff; }
-        .link-item:hover i.fa-telegram { color: #0088cc; }
+
+        .arrow {
+            color: #444;
+            font-size: 12px;
+        }
+
+        .link-card:hover .arrow {
+            color: #fff;
+        }
 
         footer {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 12px;
-            opacity: 0.5;
+            color: #444;
         }
-
     </style>
 </head>
 <body>
-
-    <div class="blob"></div>
-    <div class="blob"></div>
 
     <div class="container">
         <div class="profile-img"></div>
         
         <h1>MSR Sakibur</h1>
-        <p class="bio">Developer | Content Creator | Tech Enthusiast <br> Creating for the web & Android.</p>
+        <p class="bio">Developer & Content Creator<br>Tech Enthusiast | Anime | Code</p>
 
         <div class="links">
-            <a href="https://msrsakibur.site" target="_blank" class="link-item">
-                <i class="fas fa-globe"></i>
-                <span class="link-text">Visit My Portfolio</span>
+            <a href="https://msrsakibur.site" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="link-text">Portfolio</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://github.com/msrofficial" target="_blank" class="link-item">
-                <i class="fab fa-github"></i>
-                <span class="link-text">GitHub</span>
+            <a href="https://github.com/msrofficial" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="link-text">GitHub</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://youtube.com/@msr.sakibur" target="_blank" class="link-item">
-                <i class="fab fa-youtube"></i>
-                <span class="link-text">YouTube</span>
+            <a href="https://youtube.com/@msr.sakibur" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-youtube" style="color: #ff4d4d;"></i> <span class="link-text">YouTube</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://instagram.com/msr.sakibur" target="_blank" class="link-item">
-                <i class="fab fa-instagram"></i>
-                <span class="link-text">Instagram</span>
+            <a href="https://instagram.com/msr.sakibur" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="link-text">Instagram</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://facebook.com/sakibur.msr" target="_blank" class="link-item">
-                <i class="fab fa-facebook"></i>
-                <span class="link-text">Facebook</span>
-            </a>
-            
-            <a href="https://threads.net/@msr.sakibur" target="_blank" class="link-item">
-                <i class="fa-brands fa-threads"></i>
-                <span class="link-text">Threads</span>
+            <a href="https://facebook.com/sakibur.msr" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-facebook"></i>
+                    <span class="link-text">Facebook</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://x.com/msrsakibur" target="_blank" class="link-item">
-                <i class="fab fa-x-twitter"></i>
-                <span class="link-text">Twitter / X</span>
+            <a href="https://threads.net/@msr.sakibur" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-threads"></i>
+                    <span class="link-text">Threads</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://t.me/msr0official" target="_blank" class="link-item">
-                <i class="fab fa-telegram"></i>
-                <span class="link-text">Telegram</span>
+            <a href="https://x.com/msrsakibur" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="link-text">X (Twitter)</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="https://t.me/msr0official" target="_blank" class="link-card">
+                <div class="link-left">
+                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                    <span class="link-text">Telegram</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
         </div>
 
         <footer>
-            &copy; 2026 MSR Sakibur. All Rights Reserved.
+            © 2026 MSR Sakibur
         </footer>
     </div>
 
