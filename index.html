@@ -3,62 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSR Sakibur</title>
+    
+    <title>MSR Sakibur | MD Sakibur Rahman | Links & Portfolio</title>
+    <meta name="title" content="MSR Sakibur | MD Sakibur Rahman | Links & Portfolio">
+    <meta name="description" content="Official link tree and portfolio of MSR Sakibur (MD Sakibur Rahman). Full Stack Developer, Tech Enthusiast, and Open Source Contributor from Meherpur, Bangladesh.">
+    <meta name="keywords" content="MSR Sakibur, msrsakibur, Sakibur msr, msr sakibur, msr.sakibur, msrofficial, MD Sakibur Rahman, sakibur.msr, MSR-PatcH, Full Stack Developer Bangladesh, Meherpur, Tech Enthusiast, msrofficial.github.io">
+    <meta name="author" content="MSR Sakibur">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://msrofficial.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://msrofficial.github.io/">
+    <meta property="og:title" content="MSR Sakibur | MD Sakibur Rahman">
+    <meta property="og:description" content="Full Stack Developer & Tech Enthusiast. Check out my portfolio, GitHub, and social links.">
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=MSR&background=random&size=512">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "MD Sakibur Rahman",
+      "alternateName": ["MSR Sakibur", "MSR", "msrofficial", "msrsakibur", "msr.sakibur", "Sakibur msr"],
+      "url": "https://msrofficial.github.io/",
+      "image": "https://ui-avatars.com/api/?name=MSR&background=random&size=512",
+      "jobTitle": "Full Stack Developer",
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Meherpur, Bangladesh"
+      },
+      "sameAs": [
+        "https://msrsakibur.site",
+        "https://github.com/msrofficial",
+        "https://youtube.com/@msr.sakibur",
+        "https://instagram.com/msr.sakibur",
+        "https://facebook.com/sakibur.msr",
+        "https://threads.net/@msr.sakibur",
+        "https://x.com/msrsakibur",
+        "https://t.me/msr0official",
+        "https://t.me/msrpatch"
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         /* Modern Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background-color: #0a0a0a; /* Deep Black for minimal look */
+            background-color: #050505;
             color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 30px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Background Glow */
+        .bg-glow {
+            position: fixed;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(70, 70, 100, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
             width: 100%;
-            max-width: 400px; /* Limits width for phone view */
+            max-width: 440px;
             text-align: center;
+            z-index: 1;
         }
 
-        /* Profile Image */
         .profile-img {
-            width: 96px;
-            height: 96px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background-color: #222;
             object-fit: cover;
             margin-bottom: 16px;
-            border: 2px solid #333;
-            /* Replace the URL below with your actual photo */
+            border: 2px solid rgba(255, 255, 255, 0.1);
             background-image: url('https://ui-avatars.com/api/?name=MSR&background=random&size=128');
             background-size: cover;
             background-position: center;
             display: inline-block;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            animation: fadeInDown 0.8s ease backwards;
         }
 
         h1 {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 22px;
+            font-weight: 700;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInDown 0.7s ease backwards;
         }
 
         .bio {
             color: #888;
             font-size: 14px;
-            margin-bottom: 32px;
-            line-height: 1.5;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: fadeInDown 0.6s ease backwards;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 24px 0 12px;
+            text-align: left;
+            padding-left: 4px;
+            animation: fadeInUp 0.6s ease backwards;
         }
 
         /* Links Section */
@@ -68,60 +138,154 @@
             gap: 12px;
         }
 
+        /* Glassmorphism Cards */
         .link-card {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #161616;
-            padding: 14px 20px;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 16px 20px;
+            border-radius: 12px;
             text-decoration: none;
             color: #eee;
-            border: 1px solid #222;
-            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            animation: fadeInUp 0.6s ease backwards;
         }
 
         .link-card:hover {
-            background-color: #202020;
-            border-color: #444;
-            transform: scale(1.01);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
-        .link-left {
+        .link-left { display: flex; align-items: center; gap: 14px; }
+        .link-card i { font-size: 20px; width: 24px; text-align: center; color: #ddd; transition: transform 0.3s ease; }
+        .link-card:hover i { transform: scale(1.1); }
+        .link-text { font-size: 15px; font-weight: 500; }
+        .arrow { color: #555; font-size: 14px; transition: transform 0.3s ease, color 0.3s ease; }
+        .link-card:hover .arrow { color: #fff; transform: translateX(4px); }
+
+        /* GitHub Showcase Widget */
+        .gh-widget {
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: left;
+            animation: fadeInUp 0.7s ease backwards;
+        }
+
+        .gh-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gh-header-left {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 600;
         }
 
-        .link-card i {
-            font-size: 18px;
-            width: 24px;
-            text-align: center;
-            color: #ccc;
-        }
-
-        .link-text {
-            font-size: 14px;
+        .gh-stats-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #aaa;
             font-weight: 500;
         }
 
-        .arrow {
-            color: #444;
-            font-size: 12px;
+        .repo-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
-        .link-card:hover .arrow {
-            color: #fff;
+        .repo-item {
+            display: block;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .repo-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .repo-name {
+            color: #58a6ff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .repo-desc {
+            color: #8b949e;
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .repo-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: #8b949e;
+        }
+
+        .repo-meta span { display: flex; align-items: center; gap: 4px; }
+        .lang-color { width: 10px; height: 10px; border-radius: 50%; display: inline-block; background-color: #f1e05a; }
+
+        /* Loader */
+        .loader {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            padding: 10px 0;
         }
 
         footer {
             margin-top: 40px;
-            font-size: 12px;
-            color: #444;
+            font-size: 13px;
+            color: #555;
+            animation: fadeInUp 1s ease backwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
+
+    <div class="bg-glow"></div>
 
     <div class="container">
         <div class="profile-img"></div>
@@ -129,66 +293,86 @@
         <h1>MSR Sakibur</h1>
         <p class="bio">Developer & Content Creator<br>Tech Enthusiast | Anime | Code</p>
 
-        <div class="links">
-            <a href="https://msrsakibur.site" target="_blank" class="link-card">
+        <div class="links" style="margin-bottom: 24px;">
+            <a href="https://msrsakibur.site" target="_blank" class="link-card" style="animation-delay: 0.1s;">
                 <div class="link-left">
                     <i class="fa-solid fa-globe"></i>
-                    <span class="link-text">Portfolio</span>
+                    <span class="link-text">Portfolio Website</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+        </div>
+
+        <div class="section-title" style="animation-delay: 0.2s;">Open Source</div>
+        <div class="gh-widget" style="animation-delay: 0.3s;">
+            <div class="gh-header">
+                <div class="gh-header-left">
+                    <i class="fa-brands fa-github" style="font-size: 20px;"></i> msrofficial
+                </div>
+                <div class="gh-stats-badge" id="repo-count-badge">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+                </div>
+            </div>
+            
+            <div class="repo-list" id="repo-list">
+                <div class="loader">Fetching top repositories...</div>
+            </div>
+        </div>
+
+        <div class="section-title" style="animation-delay: 0.4s;">Socials & Contact</div>
+        <div class="links">
+            <a href="https://youtube.com/@msr.sakibur" target="_blank" class="link-card" style="animation-delay: 0.4s;">
+                <div class="link-left">
+                    <i class="fa-brands fa-youtube" style="color: #ff4d4d;"></i>
+                    <span class="link-text">YouTube</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://github.com/msrofficial" target="_blank" class="link-card">
+            <a href="https://t.me/msr0official" target="_blank" class="link-card" style="animation-delay: 0.5s;">
                 <div class="link-left">
-                    <i class="fa-brands fa-github"></i>
-                    <span class="link-text">GitHub</span>
+                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
+                    <span class="link-text">Telegram</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://youtube.com/@msr.sakibur" target="_blank" class="link-card">
+            <a href="https://t.me/msrpatch" target="_blank" class="link-card" style="animation-delay: 0.6s;">
                 <div class="link-left">
-                    <i class="fa-brands fa-youtube" style="color: #ff4d4d;"></i> <span class="link-text">YouTube</span>
+                    <i class="fa-solid fa-bullhorn" style="color: #0088cc;"></i>
+                    <span class="link-text">MSR-PatcH</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://instagram.com/msr.sakibur" target="_blank" class="link-card">
+            <a href="https://facebook.com/sakibur.msr" target="_blank" class="link-card" style="animation-delay: 0.7s;">
                 <div class="link-left">
-                    <i class="fa-brands fa-instagram"></i>
-                    <span class="link-text">Instagram</span>
-                </div>
-                <i class="fa-solid fa-chevron-right arrow"></i>
-            </a>
-
-            <a href="https://facebook.com/sakibur.msr" target="_blank" class="link-card">
-                <div class="link-left">
-                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
                     <span class="link-text">Facebook</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://threads.net/@msr.sakibur" target="_blank" class="link-card">
+            <a href="https://instagram.com/msr.sakibur" target="_blank" class="link-card" style="animation-delay: 0.8s;">
                 <div class="link-left">
-                    <i class="fa-brands fa-threads"></i>
-                    <span class="link-text">Threads</span>
+                    <i class="fa-brands fa-instagram" style="color: #e1306c;"></i>
+                    <span class="link-text">Instagram</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
 
-            <a href="https://x.com/msrsakibur" target="_blank" class="link-card">
+            <a href="https://x.com/msrsakibur" target="_blank" class="link-card" style="animation-delay: 0.9s;">
                 <div class="link-left">
                     <i class="fa-brands fa-x-twitter"></i>
                     <span class="link-text">X (Twitter)</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
-
-            <a href="https://t.me/msr0official" target="_blank" class="link-card">
+            
+            <a href="https://threads.net/@msr.sakibur" target="_blank" class="link-card" style="animation-delay: 1.0s;">
                 <div class="link-left">
-                    <i class="fa-brands fa-telegram" style="color: #0088cc;"></i>
-                    <span class="link-text">Telegram</span>
+                    <i class="fa-brands fa-threads"></i>
+                    <span class="link-text">Threads</span>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </a>
@@ -198,6 +382,60 @@
             © 2026 MSR Sakibur
         </footer>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const username = 'msrofficial';
+            const repoCountBadge = document.getElementById('repo-count-badge');
+            const repoList = document.getElementById('repo-list');
+
+            try {
+                // 1. Fetch User Data (For total repos count)
+                const userRes = await fetch(`https://api.github.com/users/${username}`);
+                const userData = await userRes.json();
+                
+                if (userData.public_repos !== undefined) {
+                    repoCountBadge.innerHTML = `<i class="fa-solid fa-book-bookmark"></i> ${userData.public_repos} Repos`;
+                }
+
+                // 2. Fetch Top Repositories (Sorted by most stars/recently updated)
+                const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=stargazers_count&direction=desc&per_page=2`);
+                const reposData = await reposRes.json();
+
+                repoList.innerHTML = ''; // Clear loader
+
+                if (reposData.length > 0) {
+                    reposData.forEach(repo => {
+                        // Language color logic (Simple fallback)
+                        let langColor = "#8b949e";
+                        if(repo.language === "JavaScript") langColor = "#f1e05a";
+                        if(repo.language === "HTML") langColor = "#e34c26";
+                        if(repo.language === "CSS") langColor = "#563d7c";
+                        if(repo.language === "Python") langColor = "#3572A5";
+
+                        repoList.innerHTML += `
+                            <a href="${repo.html_url}" target="_blank" class="repo-item">
+                                <div class="repo-name"><i class="fa-regular fa-folder-open"></i> ${repo.name}</div>
+                                <div class="repo-desc">${repo.description || 'No description provided.'}</div>
+                                <div class="repo-meta">
+                                    <span><div class="lang-color" style="background-color: ${langColor}"></div> ${repo.language || 'Code'}</span>
+                                    <span><i class="fa-regular fa-star"></i> ${repo.stargazers_count}</span>
+                                    <span><i class="fa-solid fa-code-fork"></i> ${repo.forks_count}</span>
+                                </div>
+                            </a>
+                        `;
+                    });
+                } else {
+                    repoList.innerHTML = '<div class="loader">No public repositories found.</div>';
+                }
+
+            } catch (error) {
+                console.error("Error fetching GitHub Data:", error);
+                repoCountBadge.innerHTML = "Stats unavailable";
+                repoList.innerHTML = '<div class="loader">Could not load repositories right now.</div>';
+            }
+        });
+    </script>
 
 </body>
 </html>
